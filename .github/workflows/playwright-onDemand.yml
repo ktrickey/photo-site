@@ -62,9 +62,18 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
       id: download
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+    - name: Publish to external repo
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        external_repository: ktrickey/photo-site
+        publish_branch: gh-pages
+        personal_token: ${{ secrets.PAT_TOKEN }}
+        publish_dir: ${{steps.download.outputs.download-path}}
+        destination_dir: test-reports/${{ github.repository }}
+        keep_files: true
+        user_name: "github-actions[bot]"
+        user_email: "github-actions[bot]@users.noreply.github.com"
 
   notify-dashboard:
     name: Notify Dashboard
@@ -83,5 +92,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          gh api repos/mspnp/intern-js-pipeline/dispatches \
+          gh api repos/ktrickey/photo-site/dispatches \
               --raw-field event_type=rebuild-site
