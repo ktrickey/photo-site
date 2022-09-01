@@ -62,15 +62,10 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
       id: download
-    - name: Publish to external repo
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3.7.3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-        keep_files: true
-        user_name: "github-actions[bot]"
-        user_email: "github-actions[bot]@users.noreply.github.com"
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
+        artifact_name: download
 
   notify-dashboard:
     name: Notify Dashboard
