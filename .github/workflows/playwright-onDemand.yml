@@ -66,7 +66,7 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        external_repository: ktrickey/photo-site
+        external_repository: ktrickey/test-reports
         publish_branch: gh-pages
         personal_token: ${{ secrets.PAT_TOKEN }}
         publish_dir: ${{steps.download.outputs.download-path}}
@@ -92,5 +92,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          gh api repos/ktrickey/photo-site/dispatches \
+          gh api repos/ktrickey/test-reports/dispatches \
               --raw-field event_type=rebuild-site
