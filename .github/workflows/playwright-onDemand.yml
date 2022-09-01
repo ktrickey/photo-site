@@ -65,10 +65,7 @@ jobs:
     - name: Publish to external repo
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
-      with:
-        external_repository: mspnp/intern-js-pipeline
         publish_branch: gh-pages
-        personal_token: ${{ secrets.PAT_TOKEN }}
         publish_dir: ${{steps.download.outputs.download-path}}
         destination_dir: test-reports/${{ github.repository }}
         keep_files: true
