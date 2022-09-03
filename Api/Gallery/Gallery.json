@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Home",
+  "Galleries": [
+    {
+    "Name": "xyz",
+    "Tag": "xyz",
+      "Galleries": [
+        {
+          "Name": "ssss",
+          "Tag": "sss",
+          "Galleries": []
+        }
+      ]
+    }
+  ]
+}
