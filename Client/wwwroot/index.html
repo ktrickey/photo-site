@@ -1,48 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark h-full">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Azure Static Web Apps Blazor Sample</title>
     <base href="/" />
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" />
 
 </head>
 
-<body>
+<body class="overflow-x-hidden h-full bg-gray-100 dark:bg-gray-800 dark:bg-gray-800 dark:text-white">
     <div id="app">Loading...</div>
 
-    <div id="blazor-error-ui">
+    <div id="flex justify-between bg-yellow-100 bottom-0 left-0 fixed w-full z-50 py-2.5 px-5 border-t-2 border-gray-200 text-lg dark:bg-yellow-300 dark:text-gray-800 dark:border-gray-800">
         An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
+        <a href="" class="">Reload</a>
+        <a class="">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-
-    <style>
-        .control-container {
-            background-color: #e5e5e5;
-            height: 300px;
-            margin: 0 auto;
-            width: 500px;
-        }
-
-        .e-carousel .e-carousel-items .e-carousel-item .img-container {
-            height: 100%;
-        }
-
-        .e-carousel .e-carousel-items .e-carousel-item .img-caption {
-            bottom: 4em;
-            color: #fff;
-            font-size: 12pt;
-            height: 2em;
-            position: relative;
-            padding: 0.3em 1em;
-            text-align: center;
-            width: 100%;
-        }
-    </style>
 </body>
 
 </html>
