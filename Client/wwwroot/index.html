@@ -8,20 +8,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="app.css" rel="stylesheet" />
 </head>
 
 <body class="overflow-x-hidden h-full bg-gray-100 dark:bg-gray-800 dark:bg-gray-800 dark:text-white">
     <div id="app">Loading...</div>
 
-    <div id="blazor-error-ui" >
-        An unhandled error has occurred.
-        <a href="" class="">Reload</a>
-        <a class="">🗙</a>
-    </div>
-
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-</body>
 
+    <section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active relative float-left w-full">
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+                            class="block w-full h-full"
+                            alt="Wild Landscape"
+                    />
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+                            class="block w-full h-full"
+                            alt="Camera"
+                    />
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+                            class="block w-full h-full"
+                            alt="Exotic Fruits"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="index.min.js" ></script>
 </html>
