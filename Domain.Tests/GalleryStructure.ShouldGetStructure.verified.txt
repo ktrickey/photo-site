@@ -1,0 +1,38 @@
+﻿{
+  Name: home,
+  Galleries: [
+    {
+      Name: nature,
+      Photos: [
+        {
+          Location: home\nature\001.jpg
+        },
+        {
+          Location: home\nature\002.jpg
+        },
+        {
+          Location: home\nature\003.jpg
+        }
+      ],
+      Galleries: [
+        {
+          Name: landscape
+        },
+        {
+          Name: wildlife
+        }
+      ]
+    },
+    {
+      Name: sport,
+      Galleries: [
+        {
+          Name: climbing
+        },
+        {
+          Name: football
+        }
+      ]
+    }
+  ]
+}

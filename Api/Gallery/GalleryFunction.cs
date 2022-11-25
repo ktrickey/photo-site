@@ -10,11 +10,12 @@ namespace BlazorApp.Api.Gallery;
 public static class GalleryFunction
 {
     [FunctionName("Gallery")]
-    public static IActionResult Run(
+    public static ActionResult<Domain.Gallery> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
         ILogger log)
     {
 
-        return new OkObjectResult(File.ReadAllText("Gallery\\Gallery.json"));
+        Directory.CreateDirectory("home");
+        return new OkObjectResult(Domain.Gallery.GetFolderStructure("gallery"));
     }
 }
