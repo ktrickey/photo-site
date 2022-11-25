@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright
-      run: npx playwright install --with-deps
+      run: npm install -D @playwright/test@1.16.1 @types/faker playwright@1.16.1
     - name: Install Azure static web apps
       run: npm install -g @azure/static-web-apps-cli
     - name: Install Azure function apps
