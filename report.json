@@ -34,18 +34,6 @@
           "**/?(*.)@(spec|test).*"
         ],
         "timeout": 30000
-      },
-      {
-        "outputDir": "C:/dev/photo-site/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "name": "webkit",
-        "testDir": "C:/dev/photo-site/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
       }
     ],
     "reporter": [
@@ -75,11 +63,11 @@
     "workers": 6,
     "webServer": {
       "command": "npm run start",
-      "port": 4280
+      "port": 5000
     },
     "_globalOutputDir": "C:\\dev\\photo-site",
     "_configDir": "C:\\dev\\photo-site",
-    "_testGroupsCount": 3
+    "_testGroupsCount": 2
   },
   "suites": [
     {
@@ -94,28 +82,52 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6598,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\dev\\photo-site\\test-results\\playwright-basic-test-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
             },
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "firefox",
-              "results": [],
-              "status": "skipped"
-            },
-            {
-              "timeout": 0,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectName": "webkit",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 11774,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\dev\\photo-site\\test-results\\playwright-basic-test-firefox\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
             }
           ],
           "file": "playwright.spec.ts",
@@ -125,10 +137,5 @@
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "Process from config.webServer was not able to start. Exit code: 1",
-      "stack": "Error: Process from config.webServer was not able to start. Exit code: 1\n    at Object.onceWrapper (events.js:520:26)"
-    }
-  ]
+  "errors": []
 }
