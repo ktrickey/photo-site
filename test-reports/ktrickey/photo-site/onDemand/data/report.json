@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "fileId": "200d3e11542c973f4021e720fbb33f6acf23c77d",
+      "fileName": "playwright.spec.ts",
+      "tests": [
+        {
+          "testId": "200d3e11542c973f4021e720fbb33f6acf23c77d-0a21840355dd371603ee3f44ccad6155d80ae5ab",
+          "title": "basic test",
+          "projectName": "chromium",
+          "location": {
+            "file": "playwright.spec.ts",
+            "line": 3,
+            "column": 5
+          },
+          "duration": 12287,
+          "outcome": "expected",
+          "path": [
+            "playwright.spec.ts:3"
+          ],
+          "ok": true
+        },
+        {
+          "testId": "200d3e11542c973f4021e720fbb33f6acf23c77d-4bb83b3a697c70c7f192eb23d0b04ea5a29c2559",
+          "title": "basic test",
+          "projectName": "firefox",
+          "location": {
+            "file": "playwright.spec.ts",
+            "line": 3,
+            "column": 5
+          },
+          "duration": 20806,
+          "outcome": "expected",
+          "path": [
+            "playwright.spec.ts:3"
+          ],
+          "ok": true
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "expected": 2,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true,
+        "duration": 33093
+      }
+    }
+  ],
+  "projectNames": [
+    "chromium",
+    "firefox"
+  ],
+  "stats": {
+    "total": 2,
+    "expected": 2,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "ok": true,
+    "duration": 33093
+  }
+}
