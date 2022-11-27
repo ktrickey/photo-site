@@ -11,34 +11,34 @@
         "line": 3,
         "column": 5
       },
-      "duration": 7641,
+      "duration": 8278,
       "outcome": "expected",
       "path": [
         "playwright.spec.ts:3"
       ],
       "results": [
         {
-          "duration": 7641,
-          "startTime": "2022-11-27T11:48:01.991Z",
+          "duration": 8278,
+          "startTime": "2022-11-27T22:01:04.396Z",
           "retry": 0,
           "steps": [
             {
               "title": "Before Hooks",
-              "startTime": "2022-11-27T11:48:01.992Z",
-              "duration": 246,
+              "startTime": "2022-11-27T22:01:04.396Z",
+              "duration": 273,
               "steps": [
                 {
                   "title": "browserContext.newPage",
-                  "startTime": "2022-11-27T11:48:02.180Z",
-                  "duration": 58,
+                  "startTime": "2022-11-27T22:01:04.611Z",
+                  "duration": 57,
                   "steps": []
                 }
               ]
             },
             {
               "title": "page.goto(/)",
-              "startTime": "2022-11-27T11:48:02.241Z",
-              "duration": 925,
+              "startTime": "2022-11-27T22:01:04.670Z",
+              "duration": 1087,
               "snippet": "  3 | test('basic test', async ({ page }) => {\n  4 |   await page.goto('/');\n    |              ^\n  5 |   await page.waitForSelector('header');",
               "steps": [],
               "location": {
@@ -49,8 +49,8 @@
             },
             {
               "title": "page.waitForSelector(header)",
-              "startTime": "2022-11-27T11:48:03.166Z",
-              "duration": 4762,
+              "startTime": "2022-11-27T22:01:05.758Z",
+              "duration": 5266,
               "snippet": "  4 |   await page.goto('/');\n  5 |   await page.waitForSelector('header');\n    |              ^\n  6 |   await expect(page.locator('header div:has-text(\"About\")')).toBeDefined();",
               "steps": [],
               "location": {
@@ -61,7 +61,7 @@
             },
             {
               "title": "expect.toBeDefined",
-              "startTime": "2022-11-27T11:48:07.929Z",
+              "startTime": "2022-11-27T22:01:11.026Z",
               "duration": 1,
               "snippet": "  5 |   await page.waitForSelector('header');\n  6 |   await expect(page.locator('header div:has-text(\"About\")')).toBeDefined();\n    |                                                              ^\n  7 | })",
               "steps": [],
@@ -73,12 +73,12 @@
             },
             {
               "title": "After Hooks",
-              "startTime": "2022-11-27T11:48:07.930Z",
-              "duration": 1702,
+              "startTime": "2022-11-27T22:01:11.027Z",
+              "duration": 1647,
               "steps": [
                 {
                   "title": "browserContext.close",
-                  "startTime": "2022-11-27T11:48:09.623Z",
+                  "startTime": "2022-11-27T22:01:12.665Z",
                   "duration": 8,
                   "steps": []
                 }
@@ -91,7 +91,7 @@
             {
               "name": "trace",
               "contentType": "application/zip",
-              "path": "data/8c0bb08d76954f6ea84423f317920b3be498e525.zip"
+              "path": "data/ac07818d0a61efe3bda5bf247a82e14db298a8ba.zip"
             }
           ]
         }
@@ -107,34 +107,34 @@
         "line": 3,
         "column": 5
       },
-      "duration": 14707,
+      "duration": 14658,
       "outcome": "expected",
       "path": [
         "playwright.spec.ts:3"
       ],
       "results": [
         {
-          "duration": 14707,
-          "startTime": "2022-11-27T11:48:10.061Z",
+          "duration": 14658,
+          "startTime": "2022-11-27T22:01:13.106Z",
           "retry": 0,
           "steps": [
             {
               "title": "Before Hooks",
-              "startTime": "2022-11-27T11:48:10.062Z",
-              "duration": 1639,
+              "startTime": "2022-11-27T22:01:13.106Z",
+              "duration": 1438,
               "steps": [
                 {
                   "title": "browserContext.newPage",
-                  "startTime": "2022-11-27T11:48:11.261Z",
-                  "duration": 439,
+                  "startTime": "2022-11-27T22:01:14.021Z",
+                  "duration": 523,
                   "steps": []
                 }
               ]
             },
             {
               "title": "page.goto(/)",
-              "startTime": "2022-11-27T11:48:11.704Z",
-              "duration": 1230,
+              "startTime": "2022-11-27T22:01:14.548Z",
+              "duration": 1263,
               "snippet": "  3 | test('basic test', async ({ page }) => {\n  4 |   await page.goto('/');\n    |              ^\n  5 |   await page.waitForSelector('header');",
               "steps": [],
               "location": {
@@ -145,8 +145,8 @@
             },
             {
               "title": "page.waitForSelector(header)",
-              "startTime": "2022-11-27T11:48:12.935Z",
-              "duration": 9151,
+              "startTime": "2022-11-27T22:01:15.812Z",
+              "duration": 9183,
               "snippet": "  4 |   await page.goto('/');\n  5 |   await page.waitForSelector('header');\n    |              ^\n  6 |   await expect(page.locator('header div:has-text(\"About\")')).toBeDefined();",
               "steps": [],
               "location": {
@@ -157,8 +157,8 @@
             },
             {
               "title": "expect.toBeDefined",
-              "startTime": "2022-11-27T11:48:22.089Z",
-              "duration": 0,
+              "startTime": "2022-11-27T22:01:24.999Z",
+              "duration": 1,
               "snippet": "  5 |   await page.waitForSelector('header');\n  6 |   await expect(page.locator('header div:has-text(\"About\")')).toBeDefined();\n    |                                                              ^\n  7 | })",
               "steps": [],
               "location": {
@@ -169,13 +169,13 @@
             },
             {
               "title": "After Hooks",
-              "startTime": "2022-11-27T11:48:22.090Z",
-              "duration": 2677,
+              "startTime": "2022-11-27T22:01:25.000Z",
+              "duration": 2763,
               "steps": [
                 {
                   "title": "browserContext.close",
-                  "startTime": "2022-11-27T11:48:24.751Z",
-                  "duration": 15,
+                  "startTime": "2022-11-27T22:01:27.726Z",
+                  "duration": 36,
                   "steps": []
                 }
               ]
@@ -187,7 +187,7 @@
             {
               "name": "trace",
               "contentType": "application/zip",
-              "path": "data/bda8c2ed6a4d328c6e475e3c8b40a061ca96b970.zip"
+              "path": "data/7b293517b0c60068a691d6bc822c4dba913ac217.zip"
             }
           ]
         }
