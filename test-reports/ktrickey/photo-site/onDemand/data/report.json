@@ -13,7 +13,7 @@
             "line": 3,
             "column": 5
           },
-          "duration": 8278,
+          "duration": 10306,
           "outcome": "expected",
           "path": [
             "playwright.spec.ts:3"
@@ -29,7 +29,7 @@
             "line": 3,
             "column": 5
           },
-          "duration": 14658,
+          "duration": 17929,
           "outcome": "expected",
           "path": [
             "playwright.spec.ts:3"
@@ -44,7 +44,7 @@
         "flaky": 0,
         "skipped": 0,
         "ok": true,
-        "duration": 22936
+        "duration": 28235
       }
     }
   ],
@@ -59,6 +59,6 @@
     "flaky": 0,
     "skipped": 0,
     "ok": true,
-    "duration": 22936
+    "duration": 28235
   }
 }
