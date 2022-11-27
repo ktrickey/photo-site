@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -46,7 +46,7 @@ jobs:
       env:
           TAG_NAME: test-report-${{ steps.date.outputs.date }}
       if: always()
-      with: 
+      with:
         name: onDemand
         path: pw-report/
 
@@ -63,9 +63,8 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        external_repository: ktrickey/test-reports
         publish_branch: gh-pages
-        personal_token: ${{ secrets.PAT_TOKEN }}
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{steps.download.outputs.download-path}}
         destination_dir: test-reports/${{ github.repository }}
         keep_files: true
@@ -87,7 +86,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Notify docusaurus repo
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api repos/ktrickey/test-reports/dispatches \
+          gh api repos/ktrickey/photo-site/dispatches \
               --raw-field event_type=rebuild-site
