@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -21,8 +22,8 @@ namespace ApiIsolated.Gallery
             _logger = loggerFactory.CreateLogger<HttpTrigger>();
         }
 
-        [Function("gallery")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
+        [Function("getFullGallery")]
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "gallery")] HttpRequestData req)
         {
             if (!Directory.Exists("home"))
             {
@@ -30,6 +31,19 @@ namespace ApiIsolated.Gallery
             }
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.WriteAsJsonAsync(GalleryStructure);
+            return response;
+        }
+
+        [Function("getGalleryByName")]
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "gallery/{name}")] HttpRequestData req, string galleryName)
+        {
+            var found = GalleryStructure.Find(galleryName).ToString();
+            if (!Directory.Exists("home") || !found.Any())
+            {
+                return req.CreateResponse(HttpStatusCode.NotFound);
+            }
+            var response = req.CreateResponse(HttpStatusCode.OK);
+            response.WriteAsJsonAsync(found);
             return response;
         }
 

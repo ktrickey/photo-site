@@ -1,11 +1,9 @@
-using System.Text.Json;
-
 namespace Domain.Tests;
+
 [UsesVerify]
 public class GalleryStructure
 {
-    private string[] Directories = new[]
-    {
+    private string[] Directories = {
         "home",
         @"home\nature",
         @"home\sport",
@@ -15,12 +13,13 @@ public class GalleryStructure
         @"home\sport\football"
     };
 
-    private string[] Photos = new[]
-    {
+    private string[] Photos = {
         @"home\nature\001.jpg",
         @"home\nature\002.jpg",
         @"home\nature\003.jpg"
     };
+
+
     [Fact]
     public Task ShouldGetStructure()
     {
@@ -38,5 +37,17 @@ public class GalleryStructure
         var galleries = Gallery.GetFolderStructure("home");
 
         return Verify(galleries);
+    }
+
+    [Theory]
+    [InlineData("wildlife")]
+    [InlineData("nature")]
+    public Task ShouldFindExpectedInstance(string searchTerm)
+    {
+        var galleries = Gallery.GetFolderStructure("home");
+
+        var finds = galleries.Find(searchTerm);
+
+        return Verify(finds).UseParameters(searchTerm);
     }
 }

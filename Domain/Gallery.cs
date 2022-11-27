@@ -15,7 +15,8 @@ public class Gallery
     {
         get
         {
-            return Directory.GetFiles(_path, "*.jpg", SearchOption.TopDirectoryOnly).Select(p => new Photo(p));
+            return Directory.GetFiles(_path, "*.jpg", SearchOption.TopDirectoryOnly)
+                .Select(p => new Photo(p));
         }
     }
     public IEnumerable<Gallery> Galleries
@@ -26,6 +27,19 @@ public class Gallery
             return subFolder.Select(f=> new Gallery(f));
 
         }
+    }
+    public IEnumerable<KeyValuePair<string, Gallery>> Find(string nameToFind)
+    {
+        if (nameToFind == Name) return new[] { new KeyValuePair<string, Gallery>(Name, this) };
+
+        var results = new List<KeyValuePair<string, Gallery>>();
+        foreach (var gallery in Galleries)
+        {
+
+            results.AddRange(gallery.Find(nameToFind));
+        }
+
+        return results;
     }
 
 
