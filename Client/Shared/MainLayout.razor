@@ -1,7 +1,28 @@
 ﻿@inherits LayoutComponentBase
+<MudThemeProvider IsDarkMode="true"/>
+<MudLayout>
 
-<div class="flex flex-col h-full">
-    <NavMenu />
+    <MudAppBar Open="true" Elevation="1">
 
-    @Body
-</div>
+        <MudStack Class="ml-8" Row="true" Justify="Justify.Center">
+
+            <MudPaper Class="pa-3">Home</MudPaper>
+            <MudPaper Class="pa-3">About</MudPaper>
+            <MudPaper Class="pa-3">Contact</MudPaper>
+        </MudStack>
+        <MudSpacer/>
+        <div class="flex-none object-center">
+            <MudText Align="Align.Center" Typo="Typo.h5">Kevin Trickey</MudText>
+
+
+            <MudText Align="Align.Center" Typo="Typo.h6">Photography</MudText>
+        </div>
+
+    </MudAppBar>
+
+
+    <MudMainContent>
+
+        @Body
+    </MudMainContent>
+</MudLayout>
